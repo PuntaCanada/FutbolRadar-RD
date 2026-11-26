@@ -18,7 +18,18 @@ try:
      assert response.ok
      assert page.locator('html').get_attribute('lang')==lang
      assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), (size, page.url)
+     assert page.locator('nav a').count()==8
+     assert page.locator('nav').evaluate('(n)=>n.scrollWidth<=n.clientWidth')
+     if section=='':
+      assert page.locator('.home-stats strong').all_text_contents()==['164','18','7','8']
+      assert page.locator('.home-panel').count()==4
+      assert page.locator('.match-line').count()==8
+      assert page.locator('nav a').evaluate_all('(links)=>links.every(a=>{const r=a.getBoundingClientRect();return r.left>=0 && r.right<=innerWidth})')
+      if size['width']>=1280:
+       assert page.locator('nav a').evaluate_all('(links)=>new Set(links.map(a=>Math.round(a.getBoundingClientRect().top))).size===1')
      if section=='femenino/':
+      assert page.locator('#women-football table').evaluate('(t)=>t.scrollWidth<=t.parentElement.clientWidth+1')
+      assert page.locator('#women-results tr td:last-child a:visible').count()==4
       assert page.locator('#women-results tr').count()==4
      if section=='academias/':
       assert page.locator('.academy-card:visible').count()==7
