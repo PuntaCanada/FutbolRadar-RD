@@ -103,9 +103,88 @@
     "championOfficial": "https://www.fedofutbol.do/presidente-de-fifa-felicito-a-salcedo-tras-titularse-campeon-de-la-ldf/",
     "fixtures": "https://futboliza.com/tournaments/ldf-2026-2027",
     "standings": "https://futbolrd.com/estadisticas/ldf",
-    "broadcast": "https://www.youtube.com/channel/UCyTqCrAq1n3HF0W7dRNTArA"
+    "broadcast": "https://www.youtube.com/channel/UCyTqCrAq1n3HF0W7dRNTArA",
+    "embedCandidate": "https://futboliza.com/embed/ldf-2026-2027/standings?category=019f62ca-d267-7220-994a-4c1395bf1bf8&cols=pg%2Cpe%2Cpp%2Cpts&phase=019f62cc-b650-7141-a272-2b334b243974&theme=light",
+    "sanctions": "https://www.fedofutbol.do/comision-de-apelacion-redujo-sanciones-a-clubes-por-licenciamiento-para-la-temporada-2026-2027/"
   },
   "matches": [],
   "standings": [],
-  "rights": "Individual factual editorial records only; no database extraction, logos, copied articles or video embeds. External scores and tables linked only."
+  "rights": "Individual factual editorial records only; no database extraction, logos, copied articles or video embeds. External scores and tables linked only.",
+  "clubFacts": {
+    "cibao": {
+      "city": "Santiago de los Caballeros",
+      "stadium": "Estadio Cibao FC",
+      "founded": 2014,
+      "sources": [
+        "https://www.cibaofc.com/historia/",
+        "https://www.cibaofc.com/estadio-cibaofc-2/",
+        "https://accion-deportiva.com/wp-content/uploads/2025/07/REGLAMENTO-DE-COMPETENCIA-LDF-2025-2026.pdf"
+      ]
+    },
+    "moca": {
+      "city": "Moca",
+      "stadium": "Estadio Moca 85",
+      "founded": 1971,
+      "international": [
+        [
+          "2025",
+          "CFU Club Shield"
+        ]
+      ],
+      "sources": [
+        "https://qa.concacaf.com/es/copa-de-campeones/clubes/moca-fc/",
+        "https://www.concacaf.com/news/moca-fc-campeon-del-cfu-club-shield-2025",
+        "https://accion-deportiva.com/wp-content/uploads/2025/07/REGLAMENTO-DE-COMPETENCIA-LDF-2025-2026.pdf"
+      ]
+    },
+    "salcedo": {
+      "city": "Salcedo",
+      "stadium": "Estadio Domingo Polonia",
+      "sources": [
+        "https://es.wikipedia.org/wiki/Liga_Dominicana_de_F%C3%BAtbol_2025-26",
+        "https://accion-deportiva.com/wp-content/uploads/2025/07/REGLAMENTO-DE-COMPETENCIA-LDF-2025-2026.pdf"
+      ]
+    },
+    "vega-real": {
+      "city": "La Vega",
+      "stadium": "Estadio Olímpico de La Vega",
+      "sources": [
+        "https://es.wikipedia.org/wiki/Liga_Dominicana_de_F%C3%BAtbol_2025-26",
+        "https://accion-deportiva.com/wp-content/uploads/2025/07/REGLAMENTO-DE-COMPETENCIA-LDF-2025-2026.pdf"
+      ]
+    },
+    "jarabacoa": {
+      "city": "Jarabacoa",
+      "stadium": "Estadio Junior Mejía",
+      "sources": [
+        "https://es.wikipedia.org/wiki/Liga_Dominicana_de_F%C3%BAtbol_2025-26",
+        "https://accion-deportiva.com/wp-content/uploads/2025/07/REGLAMENTO-DE-COMPETENCIA-LDF-2025-2026.pdf"
+      ]
+    },
+    "delfines": {
+      "city": "Santo Domingo Este",
+      "stadium": "Parque del Este",
+      "sources": [
+        "https://es.wikipedia.org/wiki/Liga_Dominicana_de_F%C3%BAtbol_2025-26",
+        "https://accion-deportiva.com/wp-content/uploads/2025/07/REGLAMENTO-DE-COMPETENCIA-LDF-2025-2026.pdf"
+      ]
+    },
+    "atlantico": {
+      "city": "Puerto Plata",
+      "stadium": "Estadio Leonel Plácido",
+      "sources": [
+        "https://es.wikipedia.org/wiki/Liga_Dominicana_de_F%C3%BAtbol_2025-26"
+      ]
+    },
+    "om": {
+      "city": "Santo Domingo",
+      "stadium": "Estadio Olímpico Félix Sánchez",
+      "sources": [
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Liga_Dominicana_de_F%C3%BAtbol",
+        "https://accion-deportiva.com/wp-content/uploads/2025/07/REGLAMENTO-DE-COMPETENCIA-LDF-2025-2026.pdf"
+      ]
+    }
+  },
+  "stadiumReferenceSeason": "2025/26",
+  "embedEnabled": false
 }
