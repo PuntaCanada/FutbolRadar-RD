@@ -1,3 +1,6 @@
+import json as _json
+from pathlib import Path as _Path
+expected_national=len(_json.loads((_Path(__file__).resolve().parents[1]/'data/national.json').read_text())['matches'])
 import subprocess,time
 from ldf_view import D
 from players_view import P
@@ -21,7 +24,7 @@ try:
      assert page.locator('nav a').count()==8
      assert page.locator('nav').evaluate('(n)=>n.scrollWidth<=n.clientWidth')
      if section=='':
-      assert page.locator('.home-stats strong').all_text_contents()==['164','18','7','8']
+      assert page.locator('.home-stats strong').all_text_contents()==[str(expected_national),'18','7','8']
       assert page.locator('.home-panel').count()==4
       assert page.locator('.match-line').count()==8
       assert page.locator('nav a').evaluate_all('(links)=>links.every(a=>{const r=a.getBoundingClientRect();return r.left>=0 && r.right<=innerWidth})')
@@ -63,7 +66,7 @@ try:
       assert page.locator('#ldf-champions li').count()==11
      if section=='seleccion/' and page.locator('#national-rows').count():
       total=page.locator('#national-rows tr').count()
-      assert total==164
+      assert total==expected_national
       assert int(page.locator('#stat-9').inner_text())==total
       for field in ['opponent','competition']:
        control=page.locator('#'+field)
