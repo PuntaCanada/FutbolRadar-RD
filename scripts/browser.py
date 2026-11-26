@@ -20,7 +20,9 @@ try:
      if section=='legionarios/':
       assert page.locator('.player-card:visible').count()==18
       page.locator('#player-country').select_option('ES')
-      assert page.locator('.player-card:visible').count()==7
+      assert page.locator('.player-card:visible').count()==6
+      assert page.locator('#player-count').inner_text()=='6'
+      assert set(page.locator('.player-card:visible').evaluate_all('(rows) => rows.map(r => r.dataset.name)'))=={p['name'] for p in P if p['country']=='ES'}
       page.locator('#player-position').select_option('df')
       assert page.locator('.player-card:visible').count()==3
       page.locator('#player-name').fill('junior')
