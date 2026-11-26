@@ -1,0 +1,46 @@
+name: Daily national results
+on:
+  schedule:
+    - cron: '23 10 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: national-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/import_national.py
+      - id: change
+        run: |
+          if git diff --quiet -- data/national.json data/sources.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.change.outputs.changed == 'true'
+        run: |
+          echo '6e55e25bfc4a914446c092a3e29e8eb89afb2388681948da179519b0f08fc9e6  data/national-baseline.json' | sha256sum -c -
+          python3 scripts/national_integrity.py
+          sudo unshare --net -- python3 scripts/build.py
+          sudo unshare --net -- python3 scripts/test.py
+      - if: steps.change.outputs.changed == 'true'
+        run: |
+          pip install playwright
+          python3 -m playwright install --with-deps chromium
+          python3 scripts/browser.py
+          python3 scripts/visual.py
+      - if: steps.change.outputs.changed == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- data/national.json data/sources.json
+          git commit -m 'Update validated national team results'
+          git push origin HEAD:main

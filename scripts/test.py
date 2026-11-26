@@ -1,5 +1,7 @@
 import unittest,json
 from import_national import parse
+from national_integrity import validate_current, preserve, load
+from copy import deepcopy
 from pathlib import Path
 p=Path(__file__).resolve().parents[1]
 class Tests(unittest.TestCase):
@@ -14,14 +16,27 @@ class Tests(unittest.TestCase):
   self.assertEqual([x['id'] for x in sources if x['publish']],['national'])
   payload=json.loads((p/'data/national.json').read_text())
   if isinstance(payload,dict):
-   self.assertEqual(payload['license'],'CC0-1.0'); self.assertEqual(len(payload['matches']),164)
-   self.assertEqual(payload['revision'],'ca84241bb3eed854a1956a2fab442fe4daad40dd')
-   m=payload['matches']; self.assertEqual((sum(x['gf']>x['ga'] for x in m),sum(x['gf']==x['ga'] for x in m),sum(x['gf']<x['ga'] for x in m)),(65,26,73))
-   self.assertEqual((sum(x['gf'] for x in m),sum(x['ga'] for x in m)),(274,267))
-   self.assertEqual(len({(m['date'],m['opponent']) for m in payload['matches']}),len(payload['matches']))
+   self.assertEqual(payload,validate_current())
+   baseline=load(p/'data/national-baseline.json')['matches']
+   self.assertEqual(len(baseline),164)
+   self.assertEqual((sum(x['gf']>x['ga'] for x in baseline),sum(x['gf']==x['ga'] for x in baseline),sum(x['gf']<x['ga'] for x in baseline)),(65,26,73))
+   self.assertEqual((sum(x['gf'] for x in baseline),sum(x['ga'] for x in baseline)),(274,267))
    for l in ['es','en','de','fr','it']:
     self.assertIn('id="national-rows"',(p/'public'/l/'seleccion/index.html').read_text())
   else: self.fail('Committed national snapshot missing')
+ def test_integrity(self):
+  old=load(p/'data/national-baseline.json')
+  new=deepcopy(old)
+  self.assertEqual(preserve(old,new),0)
+  new['matches'].pop()
+  with self.assertRaises(ValueError): preserve(old,new)
+  new=deepcopy(old); new['matches'][0]['gf']+=1
+  with self.assertRaises(ValueError): preserve(old,new)
+  new=deepcopy(old); new['matches'].append(deepcopy(new['matches'][-1]))
+  with self.assertRaises(ValueError): preserve(old,new)
+  new=deepcopy(old); row=deepcopy(new['matches'][-1]); row['opponent']='ZZ Test'; new['matches'].append(row)
+  new['matches'].sort(key=lambda m:(m['date'],m['opponent']))
+  self.assertEqual(preserve(old,new),1)
  def test_ldf(self):
   from ldf_view import D
   self.assertEqual(len(D['clubs']),8)

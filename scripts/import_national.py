@@ -2,6 +2,7 @@
 import csv, io, json, hashlib, re, urllib.request, os
 from datetime import date
 from pathlib import Path
+from national_integrity import preserve, load
 TEAM='Dominican Republic'
 UPSTREAM='https://github.com/martj42/international_results'
 ROOT=Path(__file__).resolve().parents[1]
@@ -50,6 +51,19 @@ def main():
  if len(matches)<164 or matches[0]['date']!='1949-05-14' or matches[-1]['date']<'2026-11-17': raise ValueError('snapshot below audited coverage')
  payload=dict(source=UPSTREAM,revision=rev,license='CC0-1.0',sha256=hashlib.sha256(raw).hexdigest(),shootouts_sha256=hashlib.sha256(shoot).hexdigest(),matches=matches)
  target=ROOT/'data/national.json'; temp=target.with_suffix('.tmp')
+ old=load(target)
+ added=preserve(old,payload)
+ if not added:
+  print('No new Dominican Republic results; no publication')
+  return
+ sources_path=ROOT/'data/sources.json'
+ sources=load(sources_path)
+ active=[s for s in sources if s['publish']]
+ if len(active)!=1 or active[0]['id']!='national': raise ValueError('unexpected source registry')
+ active[0]['revision']=rev
+ source_temp=sources_path.with_suffix('.tmp')
+ source_temp.write_text(json.dumps(sources,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+ source_temp.replace(sources_path)
  temp.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');temp.replace(target)
  print('Validated',len(matches),matches[0]['date'],matches[-1]['date'],'revision',rev,'sha256',payload['sha256'])
 if __name__=='__main__': main()
