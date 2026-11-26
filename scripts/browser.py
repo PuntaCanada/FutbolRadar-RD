@@ -13,18 +13,20 @@ try:
    errors=[]
    page.on('pageerror',lambda e:errors.append(str(e)))
    for lang in ['es','en','de','fr','it']:
-    for section in ['', 'seleccion/','liga/','academias/','fuentes/','patrocinio/']+['liga/'+slug+'/' for slug,name in D['clubs']]+['legionarios/']+['legionarios/'+p['id']+'/' for p in P]+['academias/'+a['id']+'/' for a in A]:
+    for section in ['', 'seleccion/','liga/','academias/','fuentes/','patrocinio/']+['liga/'+slug+'/' for slug,name in D['clubs']]+['legionarios/']+['legionarios/'+p['id']+'/' for p in P]+['academias/'+a['id']+'/' for a in A]+['femenino/']:
      response=page.goto('http://127.0.0.1:8765/'+lang+'/'+section)
      assert response.ok
      assert page.locator('html').get_attribute('lang')==lang
      assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), (size, page.url)
+     if section=='femenino/':
+      assert page.locator('#women-results tr').count()==4
      if section=='academias/':
-      assert page.locator('.academy-card:visible').count()==6
-      for region in ['dn','la','st','lr']:
+      assert page.locator('.academy-card:visible').count()==7
+      for region in ['dn','la','st','lr','pp']:
        page.locator('#academy-region').select_option(region)
        assert page.locator('.academy-card:visible').count()==sum(a['region']==region for a in A)
       page.locator('#academy-region').select_option('')
-      assert page.locator('#academy-count').inner_text()=='6'
+      assert page.locator('#academy-count').inner_text()=='7'
      elif section.startswith('academias/'):
       assert page.locator('#academy-profile').count()==1
      if section=='legionarios/':
@@ -75,7 +77,7 @@ try:
    page.reload()
    assert page.locator('html').get_attribute('data-theme')==theme
    assert not errors, errors
-   print('Passed viewport:', size, '195 pages and theme persistence')
+   print('Passed viewport:', size, '205 pages and theme persistence')
    page.close()
   browser.close()
  print('Chromium desktop and mobile: passed')

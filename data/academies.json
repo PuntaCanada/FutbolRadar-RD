@@ -78,6 +78,20 @@
       "sources": [
         "https://www.casadecampo.com.do/es/experiences/soccer-school/"
       ]
+    },
+    {
+      "id": "sosua",
+      "name": "Sosúa FC Soccer School",
+      "region": "pp",
+      "city": "Sosúa",
+      "ages": null,
+      "website": "https://sosuafc.com/",
+      "contact": "https://sosuafc.com/",
+      "email": "info@sosuafc.com",
+      "phone": "+1 829 941 8093",
+      "sources": [
+        "https://sosuafc.com/"
+      ]
     }
   ]
 }

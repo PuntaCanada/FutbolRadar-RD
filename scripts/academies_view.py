@@ -2,7 +2,7 @@ import json,html
 from pathlib import Path
 D=json.loads((Path(__file__).resolve().parents[1]/'data/academies.json').read_text())
 A=D['academies']
-REGIONS={'dn':'Distrito Nacional','la':'La Altagracia','st':'Santiago','lr':'La Romana'}
+REGIONS={'dn':'Distrito Nacional','la':'La Altagracia','st':'Santiago','lr':'La Romana','pp':'Puerto Plata'}
 L={
 'es':['Provincia o distrito','Todas','Edad (años)','Por confirmar','Contacto oficial','Sitio oficial','Fuentes','Fecha de consulta','Volver al listado','Confirma las condiciones y plazas directamente con la academia.','Correo','Teléfono'],
 'en':['Province or district','All','Age (years)','Unconfirmed','Official contact','Official website','Sources','Checked on','Back to directory','Confirm conditions and availability directly with the academy.','Email','Phone'],
