@@ -2,9 +2,10 @@
   {
     "id": "national",
     "url": "https://github.com/martj42/international_results",
-    "license": "CC0-1.0 claimed; verify upstream before publication",
-    "status": "pending",
-    "publish": false
+    "license": "CC0-1.0",
+    "status": "validated snapshot; historical completeness not guaranteed",
+    "publish": true,
+    "revision": "ca84241bb3eed854a1956a2fab442fe4daad40dd"
   },
   {
     "id": "fedofutbol",
