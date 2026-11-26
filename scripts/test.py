@@ -74,11 +74,11 @@ class Tests(unittest.TestCase):
      self.assertIn(CAREERS['checked'],profile)
  def test_academies(self):
   from academies_view import A,D
-  self.assertEqual(len(A),6)
-  self.assertEqual(len({a['id'] for a in A}),6)
+  self.assertEqual(len(A),7)
+  self.assertEqual(len({a['id'] for a in A}),7)
   for lang in ['es','en','de','fr','it']:
    overview=(p/'public'/lang/'academias/index.html').read_text()
-   self.assertEqual(overview.count('class="academy-card"'),6)
+   self.assertEqual(overview.count('class="academy-card"'),7)
    for a in A:
     self.assertIn('/'+lang+'/academias/'+a['id']+'/',overview)
     profile=(p/'public'/lang/'academias'/a['id']/'index.html').read_text()
@@ -86,6 +86,16 @@ class Tests(unittest.TestCase):
     self.assertIn(D['checked'],profile)
     self.assertIn(a['contact'],profile)
     self.assertNotIn('<img',profile)
+ def test_women(self):
+  from women_view import D
+  self.assertEqual([(m['gf'],m['ga']) for m in D['matches']],[(2,2),(6,1),(8,0),(1,1)])
+  for lang in ['es','en','de','fr','it']:
+   profile=(p/'public'/lang/'femenino/index.html').read_text()
+   self.assertIn('id="women-results"',profile)
+   for m in D['matches']:
+    self.assertIn(m['source'],profile)
+   for y in D['youth']:
+    self.assertIn(y['source'],profile)
  def test_parser(self):
   raw=b'date,home_team,away_team,home_score,away_score,tournament,city,country,neutral\n2000-01-01,Dominican Republic,Test,1,1,Friendly,City,Country,TRUE\n'
   shoot=b'date,home_team,away_team,winner\n2000-01-01,Dominican Republic,Test,Dominican Republic\n'
