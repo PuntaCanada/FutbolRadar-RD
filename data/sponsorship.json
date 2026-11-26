@@ -1,1 +1,19 @@
-{"enabled":false,"placements":[],"excludedSections":["academies","youth"],"affiliateLinks":false}
+{
+  "enabled": false,
+  "placements": [],
+  "excludedSections": [
+    "academies",
+    "academias",
+    "youth",
+    "femenino"
+  ],
+  "affiliateLinks": false,
+  "review": {
+    "status": "pending",
+    "licensedJurisdictions": [],
+    "contractsApproved": false,
+    "ageProtectionReviewed": false,
+    "privacyReviewed": false,
+    "advertisingRulesReviewed": false
+  }
+}
