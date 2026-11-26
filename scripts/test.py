@@ -22,6 +22,20 @@ class Tests(unittest.TestCase):
    for l in ['es','en','de','fr','it']:
     self.assertIn('id="national-rows"',(p/'public'/l/'seleccion/index.html').read_text())
   else: self.fail('Committed national snapshot missing')
+ def test_ldf(self):
+  from ldf_view import D
+  self.assertEqual(len(D['clubs']),8)
+  self.assertEqual(len({x[0] for x in D['clubs']}),8)
+  self.assertEqual(D['regularMatches'],8*14//2)
+  self.assertEqual(len(D['champions']),11)
+  self.assertEqual(D['matches'],[])
+  self.assertEqual(D['standings'],[])
+  for lang in ['es','en','de','fr','it']:
+   overview=(p/'public'/lang/'liga/index.html').read_text()
+   self.assertIn('id="ldf-season"',overview)
+   for slug,name in D['clubs']:
+    self.assertIn(f'/{lang}/liga/{slug}/',overview)
+    self.assertIn(f'<html lang="{lang}">',(p/'public'/lang/'liga'/slug/'index.html').read_text())
  def test_parser(self):
   raw=b'date,home_team,away_team,home_score,away_score,tournament,city,country,neutral\n2000-01-01,Dominican Republic,Test,1,1,Friendly,City,Country,TRUE\n'
   shoot=b'date,home_team,away_team,winner\n2000-01-01,Dominican Republic,Test,Dominican Republic\n'
