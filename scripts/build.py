@@ -32,13 +32,19 @@ for lang,t in langs.items():
    content=render_academies(lang,academy)
    if academy:title=html.escape(academy['name'])
   if i==4: content='<ul>'+''.join(f'<li><a href="{html.escape(s["url"],quote=True)}">{html.escape(s["id"])}</a> — {html.escape(s["status"])}</li>' for s in sources)+'</ul>'
-  if i==0: content += '<div class="tiles">'+''.join(f'<a href="/{lang}/{s}/">{html.escape(t[j])}</a>' for j,s in enumerate(sections) if j in (1,2,3))+'</div>'
+  if section=='':
+   title='FútbolRadar RD'
+   labels={'es':['Partidos históricos','Legionarios','Academias','Clubes LDF'],'en':['Historical matches','Players abroad','Academies','LDF clubs'],'de':['Historische Spiele','Auslandsprofis','Akademien','LDF-Vereine'],'fr':['Matchs historiques','Joueurs à l’étranger','Académies','Clubs LDF'],'it':['Partite storiche','Giocatori all’estero','Accademie','Club LDF']}[lang]
+   snapshot=json.loads((root/'data/national.json').read_text())
+   matches=snapshot if isinstance(snapshot,list) else snapshot.get('matches',[])
+   content='<div class="home-stats">'+''.join(f'<a href="/{lang}/{url}/"><strong>{n}</strong><span>{html.escape(label)}</span></a>' for n,label,url in zip([len(matches),len(P),len(A),len(LDF['clubs'])],labels,['seleccion','legionarios','academias','liga']))+'</div>'
+   content +=  '<div class="tiles">'+''.join(f'<a href="/{lang}/{s}/">{html.escape(t[j])}</a>' for j,s in enumerate(sections) if j in (1,2,3))+f'<a href="/{lang}/legionarios/">{html.escape(PLAYER_LABELS[lang][0])}</a><a href="/{lang}/femenino/">{html.escape(WOMEN_LABELS[lang][0])}</a></div>'
   if section=='legionarios' or section.startswith('legionarios/'):
    player=next((p for p in P if section=='legionarios/'+p['id']),None)
    title=html.escape(player['name'] if player else PLAYER_LABELS[lang][0]); content=render_players(lang,player)
   if section=='femenino':
    title=html.escape(WOMEN_LABELS[lang][0]); content=render_women(lang)
-  (dest/'index.html').write_text(f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title} | FútbolRadar RD</title><meta name="description" content="{html.escape(t[6],quote=True)}">{canonical}{alternate}<link rel="stylesheet" href="/style.css"><script defer src="/theme.js"></script></head><body><header><a class="brand" href="/{lang}/">⚽ FútbolRadar <b>RD</b></a><div>{switch} <button id="theme" aria-label="Light / dark">◐</button></div></header><nav>{nav}</nav><main><div class="hero"><p>FÚTBOLRADAR RD</p><h1>{title}</h1><p>{html.escape(t[6])}</p></div><section>{content}</section></main><footer>FútbolRadar RD · <a href="/{lang}/fuentes/">{html.escape(t[4])}</a></footer></body></html>',encoding='utf-8')
+  (dest/'index.html').write_text(f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title} | FútbolRadar RD</title><meta name="description" content="{html.escape(t[6],quote=True)}">{canonical}{alternate}<link rel="stylesheet" href="/style.css"><script defer src="/theme.js"></script></head><body><header><a class="brand" href="/{lang}/">⚽ FútbolRadar <b>RD</b></a><div>{switch} <button id="theme" aria-label="Light / dark">◐</button></div></header><nav aria-label="Navigation">{nav}</nav><main><div class="hero"><p>FÚTBOLRADAR RD</p><h1>{title}</h1><p>{html.escape(t[6])}</p></div><section>{content}</section></main><footer>FútbolRadar RD · <a href="/{lang}/fuentes/">{html.escape(t[4])}</a></footer></body></html>',encoding='utf-8')
   urls.append(base+path)
 (out/'index.html').write_text('<!doctype html><html lang="es"><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=/es/"><a href="/es/">FútbolRadar RD</a></html>')
 (out/'robots.txt').write_text('User-agent: *\nDisallow: /\n' if not base else 'User-agent: *\nAllow: /\nSitemap: '+base+'/sitemap.xml\n')
