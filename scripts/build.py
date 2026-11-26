@@ -1,5 +1,6 @@
 import json, html, os
 from national_view import render
+from academies_view import render_academies, A
 from players_view import render_players, P, L as PLAYER_LABELS
 from ldf_view import render_ldf, D as LDF
 from pathlib import Path
@@ -11,7 +12,7 @@ sections=['','seleccion','liga','academias','fuentes','patrocinio']; base=os.get
 if base and not base.startswith('https://'): raise ValueError('HTTPS SITE_URL required')
 urls=[]
 for lang,t in langs.items():
- for i,section in list(enumerate(sections))+[(2,'liga/'+slug) for slug,name in LDF['clubs']]+[(0,'legionarios')]+[(0,'legionarios/'+p['id']) for p in P]:
+ for i,section in list(enumerate(sections))+[(2,'liga/'+slug) for slug,name in LDF['clubs']]+[(0,'legionarios')]+[(0,'legionarios/'+p['id']) for p in P]+[(3,'academias/'+a['id']) for a in A]:
   path=f'/{lang}/'+(section+'/' if section else ''); dest=out/path.strip('/');dest.mkdir(parents=True,exist_ok=True)
   nav=''.join(f'<a href="/{lang}/{s+"/" if s else ""}">{html.escape(t[j])}</a>' for j,s in enumerate(sections))
   nav+=f'<a href="/{lang}/legionarios/">{html.escape(PLAYER_LABELS[lang][0])}</a>'
@@ -24,6 +25,10 @@ for lang,t in langs.items():
    club=next((name for slug,name in LDF['clubs'] if section=='liga/'+slug),None)
    content=render_ldf(lang,club)
    if club: title=html.escape(club)
+  if i==3:
+   academy=next((a for a in A if section=='academias/'+a['id']),None)
+   content=render_academies(lang,academy)
+   if academy:title=html.escape(academy['name'])
   if i==4: content='<ul>'+''.join(f'<li><a href="{html.escape(s["url"],quote=True)}">{html.escape(s["id"])}</a> — {html.escape(s["status"])}</li>' for s in sources)+'</ul>'
   if i==0: content += '<div class="tiles">'+''.join(f'<a href="/{lang}/{s}/">{html.escape(t[j])}</a>' for j,s in enumerate(sections) if j in (1,2,3))+'</div>'
   if section=='legionarios' or section.startswith('legionarios/'):

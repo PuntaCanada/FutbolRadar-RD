@@ -72,6 +72,20 @@ class Tests(unittest.TestCase):
      for url in career['sources']:
       self.assertIn(url,profile)
      self.assertIn(CAREERS['checked'],profile)
+ def test_academies(self):
+  from academies_view import A,D
+  self.assertEqual(len(A),6)
+  self.assertEqual(len({a['id'] for a in A}),6)
+  for lang in ['es','en','de','fr','it']:
+   overview=(p/'public'/lang/'academias/index.html').read_text()
+   self.assertEqual(overview.count('class="academy-card"'),6)
+   for a in A:
+    self.assertIn('/'+lang+'/academias/'+a['id']+'/',overview)
+    profile=(p/'public'/lang/'academias'/a['id']/'index.html').read_text()
+    self.assertIn('id="academy-profile"',profile)
+    self.assertIn(D['checked'],profile)
+    self.assertIn(a['contact'],profile)
+    self.assertNotIn('<img',profile)
  def test_parser(self):
   raw=b'date,home_team,away_team,home_score,away_score,tournament,city,country,neutral\n2000-01-01,Dominican Republic,Test,1,1,Friendly,City,Country,TRUE\n'
   shoot=b'date,home_team,away_team,winner\n2000-01-01,Dominican Republic,Test,Dominican Republic\n'
