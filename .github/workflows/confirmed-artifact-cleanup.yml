@@ -1,0 +1,27 @@
+name: Confirmed screenshot cleanup
+on:
+  pull_request:
+    branches: [main]
+    paths: ['.github/workflows/confirmed-artifact-cleanup.yml']
+permissions: {}
+jobs:
+  cleanup:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'maintenance/confirmed-artifact-cleanup'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      pull-requests: read
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+    steps:
+      - name: Delete approved screenshot archive
+        run: |
+          set -euo pipefail
+          test "$(gh api "repos/$REPO/pulls/10" --jq '.merged')" = true
+          gh api "repos/$REPO/actions/runs/45787236321" | jq -e '.status == "completed" and .conclusion == "success"' >/dev/null
+          gh api "repos/$REPO/actions/runs/45787236321/artifacts" --paginate --jq '.artifacts[]' | jq -s 'map(select(.id == 15101805518 and .name == "visual-review"))' > /tmp/a.json
+          test "$(jq length /tmp/a.json)" = 1
+          size=$(jq -er '.[0].size_in_bytes' /tmp/a.json)
+          gh api --method DELETE "repos/$REPO/actions/artifacts/15101805518"
+          echo "DELETED id=15101805518 bytes=$size"
