@@ -1,0 +1,1 @@
+(()=>{const f=document.querySelector('#academy-region');if(!f)return;const rows=[...document.querySelectorAll('.academy-card')];function update(){let n=0;for(const row of rows){row.hidden=!!f.value&&row.dataset.region!==f.value;if(!row.hidden)n++;}document.querySelector('#academy-count').textContent=n;}f.addEventListener('change',update);update();})();
