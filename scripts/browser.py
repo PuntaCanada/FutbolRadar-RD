@@ -1,4 +1,5 @@
 import subprocess,time
+from ldf_view import D
 from playwright.sync_api import sync_playwright
 server=subprocess.Popen(['python3','-m','http.server','8765','--bind','127.0.0.1','--directory','public'])
 try:
@@ -10,11 +11,14 @@ try:
    errors=[]
    page.on('pageerror',lambda e:errors.append(str(e)))
    for lang in ['es','en','de','fr','it']:
-    for section in ['', 'seleccion/','liga/','academias/','fuentes/','patrocinio/']:
+    for section in ['', 'seleccion/','liga/','academias/','fuentes/','patrocinio/']+['liga/'+slug+'/' for slug,name in D['clubs']]:
      response=page.goto('http://127.0.0.1:8765/'+lang+'/'+section)
      assert response.ok
      assert page.locator('html').get_attribute('lang')==lang
      assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), (size, page.url)
+     if section=='liga/':
+      assert page.locator('[data-club]').count()==8
+      assert page.locator('#ldf-champions li').count()==11
      if section=='seleccion/' and page.locator('#national-rows').count():
       total=page.locator('#national-rows tr').count()
       assert total==164
@@ -42,7 +46,7 @@ try:
    page.reload()
    assert page.locator('html').get_attribute('data-theme')==theme
    assert not errors, errors
-   print('Passed viewport:', size, '30 pages and theme persistence')
+   print('Passed viewport:', size, '70 pages and theme persistence')
    page.close()
   browser.close()
  print('Chromium desktop and mobile: passed')
