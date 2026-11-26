@@ -61,7 +61,7 @@ class Tests(unittest.TestCase):
     self.assertNotIn('<img',profile)
  def test_player_careers(self):
   from players_view import CAREERS,P
-  self.assertEqual(set(CAREERS['profiles']),{'junior-firpo','xavier-valdez'})
+  self.assertEqual(set(CAREERS['profiles']),{'junior-firpo','xavier-valdez','pablo-rosario','heinz-morschel','peter-gonzalez','noah-dollenmayer','edison-azcona','mariano-diaz'})
   for player in P:
    career=CAREERS['profiles'].get(player['id'])
    for lang in ['es','en','de','fr','it']:
