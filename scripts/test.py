@@ -59,6 +59,19 @@ class Tests(unittest.TestCase):
     self.assertIn('id="player-profile"',profile)
     self.assertIn(D['sources'][player['source']]['date'],profile)
     self.assertNotIn('<img',profile)
+ def test_player_careers(self):
+  from players_view import CAREERS,P
+  self.assertEqual(set(CAREERS['profiles']),{'junior-firpo','xavier-valdez'})
+  for player in P:
+   career=CAREERS['profiles'].get(player['id'])
+   for lang in ['es','en','de','fr','it']:
+    profile=(p/'public'/lang/'legionarios'/player['id']/'index.html').read_text()
+    self.assertEqual('id="player-career"' in profile,bool(career))
+    if career:
+     self.assertEqual(set(career['text']),{'es','en','de','fr','it'})
+     for url in career['sources']:
+      self.assertIn(url,profile)
+     self.assertIn(CAREERS['checked'],profile)
  def test_parser(self):
   raw=b'date,home_team,away_team,home_score,away_score,tournament,city,country,neutral\n2000-01-01,Dominican Republic,Test,1,1,Friendly,City,Country,TRUE\n'
   shoot=b'date,home_team,away_team,winner\n2000-01-01,Dominican Republic,Test,Dominican Republic\n'

@@ -1,0 +1,31 @@
+{
+  "checked": "2026-11-26",
+  "profiles": {
+    "junior-firpo": {
+      "sources": [
+        "https://www.realbetisbalompie.es/noticias/actualidad/junior-firpo-nuevo-refuerzo-del-real-betis-balompie-31554"
+      ],
+      "text": {
+        "es": "Ingresó en la cantera del Betis en 2014 y debutó con el primer equipo en 2018. Jugó en el FC Barcelona y Leeds United antes de regresar al Betis en 2025, con contrato anunciado hasta 2028. Ganó la Copa del Rey y el Europeo sub-21 con España.",
+        "en": "Joined the Betis academy in 2014 and made his first-team debut in 2018. Played for FC Barcelona and Leeds United before returning to Betis in 2025 on a contract announced through 2028. Won the Copa del Rey and the European U21 championship with Spain.",
+        "de": "Seit 2014 im Betis-Nachwuchs, 2018 Profidebüt. Stationen beim FC Barcelona und Leeds United, 2025 Rückkehr zu Betis mit angekündigtem Vertrag bis 2028. Gewinner der Copa del Rey und der U21-Europameisterschaft mit Spanien.",
+        "fr": "Formé au Betis dès 2014, il débute en équipe première en 2018. Après le FC Barcelone et Leeds United, il revient au Betis en 2025 avec un contrat annoncé jusqu’en 2028. Vainqueur de la Coupe du Roi et de l’Euro espoirs avec l’Espagne.",
+        "it": "Nel vivaio del Betis dal 2014, debutta in prima squadra nel 2018. Dopo FC Barcelona e Leeds United torna al Betis nel 2025 con contratto annunciato fino al 2028. Vincitore della Coppa del Re e dell’Europeo Under 21 con la Spagna."
+      }
+    },
+    "xavier-valdez": {
+      "sources": [
+        "https://www.nashvillesc.com/news/nashville-sc-signs-goalkeeper-xavier-valdez",
+        "https://www.nashvillesc.com/news/nashville-sc-announces-2026-roster-decisions",
+        "https://www.nashvillesc.com/news/six-nashville-soccer-club-players-called-up-for-november-fifa-window"
+      ],
+      "text": {
+        "es": "Firmó con Houston Dynamo FC en 2022 y jugó con Houston Dynamo FC 2 en MLS NEXT Pro. Nashville SC anunció su fichaje en 2025 y lo incluyó en su plantilla de 2026.",
+        "en": "Signed with Houston Dynamo FC in 2022 and played for Houston Dynamo FC 2 in MLS NEXT Pro. Nashville SC announced his signing in 2025 and listed him in its 2026 roster.",
+        "de": "Vertrag bei Houston Dynamo FC ab 2022 und Einsätze für Houston Dynamo FC 2 in MLS NEXT Pro. Nashville SC meldete seine Verpflichtung 2025 und führte ihn im Kader 2026.",
+        "fr": "Engagé par Houston Dynamo FC en 2022, il évolue avec Houston Dynamo FC 2 en MLS NEXT Pro. Nashville SC annonce son recrutement en 2025 et le présente dans son effectif 2026.",
+        "it": "Ingaggiato da Houston Dynamo FC nel 2022, gioca con Houston Dynamo FC 2 in MLS NEXT Pro. Nashville SC annuncia il suo ingaggio nel 2025 e lo include nella rosa 2026."
+      }
+    }
+  }
+}
