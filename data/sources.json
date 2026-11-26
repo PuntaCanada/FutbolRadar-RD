@@ -1,0 +1,30 @@
+[
+  {
+    "id": "national",
+    "url": "https://github.com/martj42/international_results",
+    "license": "CC0-1.0 claimed; verify upstream before publication",
+    "status": "pending",
+    "publish": false
+  },
+  {
+    "id": "fedofutbol",
+    "url": "https://www.fedofutbol.do/feed/",
+    "license": "unconfirmed",
+    "status": "pending",
+    "publish": false
+  },
+  {
+    "id": "futboltotal",
+    "url": "https://www.futboltotalrd.com/feed/",
+    "license": "unconfirmed",
+    "status": "pending",
+    "publish": false
+  },
+  {
+    "id": "api-football",
+    "url": "https://www.api-football.com/terms",
+    "license": "unconfirmed",
+    "status": "blocked",
+    "publish": false
+  }
+]

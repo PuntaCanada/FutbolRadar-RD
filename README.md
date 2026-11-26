@@ -1,1 +1,2 @@
-# FutbolRadar-RD
+# FútbolRadar RD
+Starter, not production. Python standard library build: python3 scripts/build.py. Output: public. Run python3 scripts/test.py. Source audit: python3 scripts/probe.py (network required). Browser tests use Playwright in CI. All source rights pending; no data published before validation. Sponsoring disabled. No API key required. No tracking. Set SITE_URL only after legal and source review. No generated pages committed; Cloudflare builds them.

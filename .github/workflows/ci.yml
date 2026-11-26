@@ -1,0 +1,14 @@
+name: CI
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/build.py
+      - run: python3 scripts/test.py
+      - run: pip install playwright
+      - run: python3 -m playwright install --with-deps chromium
+      - run: python3 scripts/browser.py
