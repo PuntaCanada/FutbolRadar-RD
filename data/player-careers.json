@@ -26,6 +26,84 @@
         "fr": "Engagé par Houston Dynamo FC en 2022, il évolue avec Houston Dynamo FC 2 en MLS NEXT Pro. Nashville SC annonce son recrutement en 2025 et le présente dans son effectif 2026.",
         "it": "Ingaggiato da Houston Dynamo FC nel 2022, gioca con Houston Dynamo FC 2 in MLS NEXT Pro. Nashville SC annuncia il suo ingaggio nel 2025 e lo include nella rosa 2026."
       }
+    },
+    "pablo-rosario": {
+      "sources": [
+        "https://www.ogcnice.com/en/fiche/1971/pablo-rosario.html",
+        "https://www.ogcnice.com/en/article/129128/pablo-rosario-moves-to-porto.html"
+      ],
+      "text": {
+        "es": "Pasó por la cantera del Ajax y debutó como sénior en Almere City en 2015/16. Ganó la liga neerlandesa 2017/18 con el PSV. Jugó en el OGC Nice de 2021 a 2025, antes de fichar por el FC Porto.",
+        "en": "Trained at Ajax and made his senior debut at Almere City in 2015/16. Won the 2017/18 Dutch league with PSV. Played for OGC Nice from 2021 to 2025 before joining FC Porto.",
+        "de": "Ausbildung bei Ajax, Seniorendebüt bei Almere City 2015/16. Niederländischer Meister 2017/18 mit PSV. Von 2021 bis 2025 bei OGC Nizza, anschließend Wechsel zum FC Porto.",
+        "fr": "Formé à l’Ajax, il débute chez les seniors à Almere City en 2015/16. Champion des Pays-Bas 2017/18 avec le PSV. À Nice de 2021 à 2025, puis au FC Porto.",
+        "it": "Formato all’Ajax, debutta tra i senior all’Almere City nel 2015/16. Campione dei Paesi Bassi 2017/18 con il PSV. Al Nizza dal 2021 al 2025, poi al Porto."
+      }
+    },
+    "heinz-morschel": {
+      "sources": [
+        "https://fcvizela.pt/2024/08/09/morschel-chega-para-o-meio-campo/",
+        "https://fcvizela.pt/2026/05/25/heinz-morschel-novamente-no-onze-do-ano-da-ii-liga/"
+      ],
+      "text": {
+        "es": "Jugó en el Dynamo Dresden y el Újpest antes de incorporarse al FC Vizela en 2024. Fue elegido en el once del año de la segunda liga portuguesa por segunda temporada consecutiva en 2026.",
+        "en": "Played for Dynamo Dresden and Újpest before joining FC Vizela in 2024. Selected for the Portuguese second division team of the year for the second consecutive season in 2026.",
+        "de": "Stationen bei Dynamo Dresden und Újpest vor dem Wechsel zum FC Vizela 2024. 2026 zum zweiten Mal in Folge in die Saisonelf der zweiten portugiesischen Liga gewählt.",
+        "fr": "Passé par le Dynamo Dresde et Újpest avant de rejoindre Vizela en 2024. Élu dans le onze de la saison de deuxième division portugaise pour la deuxième année consécutive en 2026.",
+        "it": "Ha giocato nel Dynamo Dresda e nell’Újpest prima di passare al Vizela nel 2024. Nel 2026 è stato incluso nella squadra dell’anno della seconda divisione portoghese per la seconda stagione consecutiva."
+      }
+    },
+    "peter-gonzalez": {
+      "sources": [
+        "https://www.gornikzabrze.pl/en/news/events/real-madrid-youth-product-gornik-peter-federico-strengthens-tricolors",
+        "https://www.gornikzabrze.pl/druzyny/druzyna-i/zawodnicy-i-sztab/peter-federico-gonzalez-carmona"
+      ],
+      "text": {
+        "es": "Formado en el Real Madrid, pasó por Valencia, Getafe y Real Valladolid. Participó en los Juegos Olímpicos de 2024. Górnik anunció su fichaje definitivo en 2026 con contrato hasta junio de 2029.",
+        "en": "A Real Madrid academy graduate, he played for Valencia, Getafe and Real Valladolid. Participated in the 2024 Olympics. Górnik announced his permanent signing in 2026 with a contract through June 2029.",
+        "de": "Ausbildung bei Real Madrid, Stationen bei Valencia, Getafe und Real Valladolid. Teilnehmer der Olympischen Spiele 2024. Górnik meldete 2026 seine feste Verpflichtung bis Juni 2029.",
+        "fr": "Formé au Real Madrid, il est passé par Valence, Getafe et Valladolid. Participant aux Jeux olympiques 2024. Górnik annonce son transfert définitif en 2026 avec un contrat jusqu’en juin 2029.",
+        "it": "Formato al Real Madrid, ha giocato per Valencia, Getafe e Valladolid. Ha partecipato ai Giochi olimpici 2024. Górnik ha annunciato il suo acquisto definitivo nel 2026 con contratto fino a giugno 2029."
+      }
+    },
+    "noah-dollenmayer": {
+      "sources": [
+        "https://www.eplocomotivefc.com/news/2023/12/01/el-paso-locomotive-fc-sign-defender-noah-dollenmayer-from-lafc2-of-mls-next-pro/",
+        "https://www.eplocomotivefc.com/news/2025/12/09/el-paso-locomotive-fc-re-sign-four-additional-players-for-2026/"
+      ],
+      "text": {
+        "es": "Llegó a El Paso cedido en 2023 desde LAFC y posteriormente firmó procedente de LAFC 2. En 2025 estuvo cedido al San Antonio FC y regresó a El Paso para 2026.",
+        "en": "Joined El Paso on loan from LAFC in 2023 before signing from LAFC 2. Spent part of 2025 on loan at San Antonio FC and returned to El Paso for 2026.",
+        "de": "2023 von LAFC an El Paso ausgeliehen, anschließend von LAFC 2 verpflichtet. 2025 Leihe zu San Antonio FC, Rückkehr zu El Paso für 2026.",
+        "fr": "Prêté à El Paso par LAFC en 2023, puis recruté en provenance de LAFC 2. Prêt à San Antonio en 2025 et retour à El Paso pour 2026.",
+        "it": "In prestito a El Paso dal LAFC nel 2023, poi acquistato dal LAFC 2. Prestito al San Antonio nel 2025 e ritorno a El Paso per il 2026."
+      }
+    },
+    "edison-azcona": {
+      "sources": [
+        "https://www.lasvegaslightsfc.com/news/2024/07/09/las-vegas-lights-complete-historic-transaction-on-edison-azcona/",
+        "https://www.lasvegaslightsfc.com/news/2026/02/05/new-faces-new-identity-the-lights-roster-build-so-far/"
+      ],
+      "text": {
+        "es": "Llegó cedido desde Inter Miami a Las Vegas Lights en 2024. El club ejerció la opción de compra en julio de ese año y confirmó su continuidad para 2026.",
+        "en": "Joined Las Vegas Lights on loan from Inter Miami in 2024. The club exercised its purchase option in July that year and listed him among returning players for 2026.",
+        "de": "2024 von Inter Miami an Las Vegas Lights ausgeliehen. Im Juli zog Las Vegas die Kaufoption; für 2026 wurde er als zurückkehrender Spieler geführt.",
+        "fr": "Prêté par Inter Miami à Las Vegas en 2024, puis transféré définitivement après activation de l’option en juillet. Le club confirme sa présence pour 2026.",
+        "it": "In prestito dall’Inter Miami al Las Vegas nel 2024, acquistato a titolo definitivo a luglio. Confermato tra i giocatori di ritorno per il 2026."
+      }
+    },
+    "mariano-diaz": {
+      "sources": [
+        "https://www.realmadrid.com/es-ES/el-club/historia/leyendas-futbol/mariano-diaz-mejia",
+        "https://sevillafc.es/en/actualidad/noticias/principio-acuerdo-mariano-diaz-sevilla-fc"
+      ],
+      "text": {
+        "es": "Jugó en el Real Madrid y el Olympique de Lyon en 2017/18 antes de regresar al Madrid en 2018. En 2023 el Sevilla anunció un principio de acuerdo para su incorporación.",
+        "en": "Played for Real Madrid and Olympique Lyonnais in 2017/18 before returning to Madrid in 2018. Sevilla announced an initial agreement to sign him in 2023.",
+        "de": "Stationen bei Real Madrid und Olympique Lyon (2017/18), 2018 Rückkehr zu Real Madrid. Sevilla meldete 2023 eine grundsätzliche Einigung über seine Verpflichtung.",
+        "fr": "Passé par le Real Madrid et Lyon en 2017/18, puis de retour à Madrid en 2018. Séville annonce un accord de principe en 2023.",
+        "it": "Ha giocato nel Real Madrid e nel Lione nel 2017/18, tornando a Madrid nel 2018. Nel 2023 il Siviglia annuncia un accordo di massima."
+      }
     }
   }
 }
