@@ -7,8 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: python3 scripts/build.py
-      - run: python3 scripts/test.py
+      - run: echo '6e55e25bfc4a914446c092a3e29e8eb89afb2388681948da179519b0f08fc9e6  data/national.json' | sha256sum -c -
+      - name: Build from committed snapshot without network
+        run: |
+          sudo unshare --net -- python3 scripts/build.py
+          sudo unshare --net -- python3 scripts/test.py
+          git diff --exit-code -- data/national.json
       - run: pip install playwright
       - run: python3 -m playwright install --with-deps chromium
       - run: python3 scripts/browser.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: validated-national-data
+          path: data/national.json

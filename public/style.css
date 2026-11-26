@@ -3,3 +3,5 @@
 .hero h1, section, nav a, .tiles a { overflow-wrap: anywhere; }
 header > *, nav > *, .tiles > * { min-width: 0; max-width: 100%; }
 .tiles { grid-template-columns: repeat(auto-fit,minmax(min(170px,100%),1fr)); }
+
+.national-filters,.national-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));gap:1rem;margin:1rem 0}.national-filters label{display:grid;gap:.4rem;min-width:0}.national-filters input,.national-filters select{width:100%;min-width:0;font:inherit;padding:.5rem}.national-stats div{padding:1rem;border:1px solid #8496ad;border-radius:12px;display:grid;gap:.5rem}.national-stats strong{font-size:1.5rem}.national-table{overflow-x:auto;max-width:100%}.national-table table{border-collapse:collapse;width:100%}.national-table td,.national-table th{padding:.65rem;text-align:left;border-bottom:1px solid #8496ad}.national-table tr[hidden]{display:none}

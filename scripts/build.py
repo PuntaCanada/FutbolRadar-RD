@@ -1,4 +1,5 @@
 import json, html, os
+from national_view import render
 from pathlib import Path
 root=Path(__file__).resolve().parents[1]
 out=root/'public'; out.mkdir(exist_ok=True)
@@ -15,6 +16,7 @@ for lang,t in langs.items():
   alternate=''.join(f'<link rel="alternate" hreflang="{l}" href="{base}/{l}/{section+"/" if section else ""}">' for l in langs) if base else ''
   canonical=f'<link rel="canonical" href="{base}{path}">' if base else '<meta name="robots" content="noindex">'
   content=html.escape(t[8] if i==5 else t[7]); title=html.escape(t[i])
+  if i==1: content=render(lang) or content
   if i==4: content='<ul>'+''.join(f'<li><a href="{html.escape(s["url"],quote=True)}">{html.escape(s["id"])}</a> — {html.escape(s["status"])}</li>' for s in sources)+'</ul>'
   if i==0: content += '<div class="tiles">'+''.join(f'<a href="/{lang}/{s}/">{html.escape(t[j])}</a>' for j,s in enumerate(sections) if j in (1,2,3))+'</div>'
   (dest/'index.html').write_text(f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title} | FútbolRadar RD</title><meta name="description" content="{html.escape(t[6],quote=True)}">{canonical}{alternate}<link rel="stylesheet" href="/style.css"><script defer src="/theme.js"></script></head><body><header><a class="brand" href="/{lang}/">⚽ FútbolRadar <b>RD</b></a><div>{switch} <button id="theme" aria-label="Light / dark">◐</button></div></header><nav>{nav}</nav><main><div class="hero"><p>FÚTBOLRADAR RD</p><h1>{title}</h1><p>{html.escape(t[6])}</p></div><section>{content}</section></main><footer>FútbolRadar RD · <a href="/{lang}/fuentes/">{html.escape(t[4])}</a></footer></body></html>',encoding='utf-8')
