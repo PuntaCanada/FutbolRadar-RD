@@ -1,0 +1,94 @@
+{
+  "matches": [
+    {
+      "report": "2025-12-02",
+      "opponent": {
+        "es": "Surinam",
+        "en": "Suriname",
+        "de": "Suriname",
+        "fr": "Suriname",
+        "it": "Suriname"
+      },
+      "gf": 2,
+      "ga": 2,
+      "source": "https://www.fedofutbol.do/rd-igualo-ante-surinam-en-su-ruta-hacia-el-mundial-femenino-brasil-2027/"
+    },
+    {
+      "report": "2026-03-01",
+      "opponent": {
+        "es": "Belice",
+        "en": "Belize",
+        "de": "Belize",
+        "fr": "Belize",
+        "it": "Belize"
+      },
+      "gf": 6,
+      "ga": 1,
+      "source": "https://www.fedofutbol.do/republica-dominicana-goleo-en-su-ruta-hacia-el-mundial-fifa-femenino-brasil-2027/"
+    },
+    {
+      "report": "2026-03-07",
+      "opponent": {
+        "es": "Anguila",
+        "en": "Anguilla",
+        "de": "Anguilla",
+        "fr": "Anguilla",
+        "it": "Anguilla"
+      },
+      "gf": 8,
+      "ga": 0,
+      "source": "https://www.fedofutbol.do/seleccion-dominicana-femenina-volvio-a-ganar-y-definira-su-pase-en-abril-frente-a-haiti/"
+    },
+    {
+      "report": "2026-04-18",
+      "opponent": {
+        "es": "Haití",
+        "en": "Haiti",
+        "de": "Haiti",
+        "fr": "Haïti",
+        "it": "Haiti"
+      },
+      "gf": 1,
+      "ga": 1,
+      "source": "https://www.fedofutbol.do/rd-igualo-ante-haiti-en-cierre-de-primera-fase-de-la-clasificatoria-femenina-para-brasil-2027/"
+    }
+  ],
+  "youth": [
+    {
+      "title": {
+        "es": "TNAC Prejuvenil Femenino",
+        "en": "Girls’ youth TNAC",
+        "de": "Juniorinnen-TNAC",
+        "fr": "TNAC féminin jeunes",
+        "it": "TNAC giovanile femminile"
+      },
+      "text": {
+        "es": "EF D&F ganó la final ante SD Colonial: 3–1 en la vuelta. Participaron 16 equipos.",
+        "en": "EF D&F won the final against SD Colonial: 3–1 in the second leg. 16 teams participated.",
+        "de": "EF D&F gewann das Finale gegen SD Colonial (Rückspiel 3:1). 16 Teams nahmen teil.",
+        "fr": "EF D&F a remporté la finale contre SD Colonial (3–1 au retour). 16 équipes participantes.",
+        "it": "EF D&F ha vinto la finale contro SD Colonial (3–1 al ritorno). 16 squadre partecipanti."
+      },
+      "date": "2026-03-28",
+      "source": "https://www.fedofutbol.do/ef-df-campeon-del-tnac-prejuvenil-femenino-2025-2026/"
+    },
+    {
+      "title": {
+        "es": "Centros Regionales de Talentos",
+        "en": "Regional talent centres",
+        "de": "Regionale Talentzentren",
+        "fr": "Centres régionaux de talents",
+        "it": "Centri regionali di talento"
+      },
+      "text": {
+        "es": "Cuatro jornadas de captación FIFA TDS en enero de 2026: Santiago, Azua, zona metropolitana y La Romana.",
+        "en": "Four FIFA TDS scouting sessions in January 2026: Santiago, Azua, metropolitan area and La Romana.",
+        "de": "Vier FIFA-TDS-Sichtungen im Januar 2026: Santiago, Azua, Metropolregion und La Romana.",
+        "fr": "Quatre détections FIFA TDS en janvier 2026 : Santiago, Azua, zone métropolitaine et La Romana.",
+        "it": "Quattro selezioni FIFA TDS nel gennaio 2026: Santiago, Azua, area metropolitana e La Romana."
+      },
+      "date": "2026-01-23",
+      "source": "https://www.fedofutbol.do/completadas-las-visorias-femeninas-de-los-centros-regionales-de-talentos-fifa-tds-de-la-fdf/"
+    }
+  ]
+}
