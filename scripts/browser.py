@@ -16,6 +16,10 @@ try:
      assert response.ok
      assert page.locator('html').get_attribute('lang')==lang
      assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), (size, page.url)
+     if section.startswith('liga/') and section!='liga/':
+      assert page.locator('#club-facts dt').count()==5
+      assert page.locator('#club-facts dd').count()==5
+      assert page.locator('iframe').count()==0
      if section=='liga/':
       assert page.locator('[data-club]').count()==8
       assert page.locator('#ldf-champions li').count()==11
