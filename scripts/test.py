@@ -30,12 +30,22 @@ class Tests(unittest.TestCase):
   self.assertEqual(len(D['champions']),11)
   self.assertEqual(D['matches'],[])
   self.assertEqual(D['standings'],[])
+  self.assertFalse(D['embedEnabled'])
+  self.assertEqual(set(D['clubFacts']),{slug for slug,name in D['clubs']})
+  for fact in D['clubFacts'].values():
+   self.assertTrue(fact['city'] and fact['stadium'] and fact['sources'])
+   self.assertTrue(all(url.startswith('https://') for url in fact['sources']))
   for lang in ['es','en','de','fr','it']:
    overview=(p/'public'/lang/'liga/index.html').read_text()
    self.assertIn('id="ldf-season"',overview)
    for slug,name in D['clubs']:
     self.assertIn(f'/{lang}/liga/{slug}/',overview)
-    self.assertIn(f'<html lang="{lang}">',(p/'public'/lang/'liga'/slug/'index.html').read_text())
+    profile=(p/'public'/lang/'liga'/slug/'index.html').read_text()
+    self.assertIn(f'<html lang="{lang}">',profile)
+    self.assertIn('id="club-facts"',profile)
+    self.assertIn(D['clubFacts'][slug]['city'],profile)
+    self.assertIn(D['stadiumReferenceSeason'],profile)
+    self.assertNotIn('<iframe',profile)
  def test_parser(self):
   raw=b'date,home_team,away_team,home_score,away_score,tournament,city,country,neutral\n2000-01-01,Dominican Republic,Test,1,1,Friendly,City,Country,TRUE\n'
   shoot=b'date,home_team,away_team,winner\n2000-01-01,Dominican Republic,Test,Dominican Republic\n'
