@@ -65,6 +65,45 @@
         "fr": "Formé au Real Madrid, il est passé par Valence, Getafe et Valladolid. Participant aux Jeux olympiques 2024. Górnik annonce son transfert définitif en 2026 avec un contrat jusqu’en juin 2029.",
         "it": "Formato al Real Madrid, ha giocato per Valencia, Getafe e Valladolid. Ha partecipato ai Giochi olimpici 2024. Górnik ha annunciato il suo acquisto definitivo nel 2026 con contratto fino a giugno 2029."
       }
+    },
+    "noah-dollenmayer": {
+      "sources": [
+        "https://www.eplocomotivefc.com/news/2023/12/01/el-paso-locomotive-fc-sign-defender-noah-dollenmayer-from-lafc2-of-mls-next-pro/",
+        "https://www.eplocomotivefc.com/news/2025/12/09/el-paso-locomotive-fc-re-sign-four-additional-players-for-2026/"
+      ],
+      "text": {
+        "es": "Llegó a El Paso cedido en 2023 desde LAFC y posteriormente firmó procedente de LAFC 2. En 2025 estuvo cedido al San Antonio FC y regresó a El Paso para 2026.",
+        "en": "Joined El Paso on loan from LAFC in 2023 before signing from LAFC 2. Spent part of 2025 on loan at San Antonio FC and returned to El Paso for 2026.",
+        "de": "2023 von LAFC an El Paso ausgeliehen, anschließend von LAFC 2 verpflichtet. 2025 Leihe zu San Antonio FC, Rückkehr zu El Paso für 2026.",
+        "fr": "Prêté à El Paso par LAFC en 2023, puis recruté en provenance de LAFC 2. Prêt à San Antonio en 2025 et retour à El Paso pour 2026.",
+        "it": "In prestito a El Paso dal LAFC nel 2023, poi acquistato dal LAFC 2. Prestito al San Antonio nel 2025 e ritorno a El Paso per il 2026."
+      }
+    },
+    "edison-azcona": {
+      "sources": [
+        "https://www.lasvegaslightsfc.com/news/2024/07/09/las-vegas-lights-complete-historic-transaction-on-edison-azcona/",
+        "https://www.lasvegaslightsfc.com/news/2026/02/05/new-faces-new-identity-the-lights-roster-build-so-far/"
+      ],
+      "text": {
+        "es": "Llegó cedido desde Inter Miami a Las Vegas Lights en 2024. El club ejerció la opción de compra en julio de ese año y confirmó su continuidad para 2026.",
+        "en": "Joined Las Vegas Lights on loan from Inter Miami in 2024. The club exercised its purchase option in July that year and listed him among returning players for 2026.",
+        "de": "2024 von Inter Miami an Las Vegas Lights ausgeliehen. Im Juli zog Las Vegas die Kaufoption; für 2026 wurde er als zurückkehrender Spieler geführt.",
+        "fr": "Prêté par Inter Miami à Las Vegas en 2024, puis transféré définitivement après activation de l’option en juillet. Le club confirme sa présence pour 2026.",
+        "it": "In prestito dall’Inter Miami al Las Vegas nel 2024, acquistato a titolo definitivo a luglio. Confermato tra i giocatori di ritorno per il 2026."
+      }
+    },
+    "mariano-diaz": {
+      "sources": [
+        "https://www.realmadrid.com/es-ES/el-club/historia/leyendas-futbol/mariano-diaz-mejia",
+        "https://sevillafc.es/en/actualidad/noticias/principio-acuerdo-mariano-diaz-sevilla-fc"
+      ],
+      "text": {
+        "es": "Jugó en el Real Madrid y el Olympique de Lyon en 2017/18 antes de regresar al Madrid en 2018. En 2023 el Sevilla anunció un principio de acuerdo para su incorporación.",
+        "en": "Played for Real Madrid and Olympique Lyonnais in 2017/18 before returning to Madrid in 2018. Sevilla announced an initial agreement to sign him in 2023.",
+        "de": "Stationen bei Real Madrid und Olympique Lyon (2017/18), 2018 Rückkehr zu Real Madrid. Sevilla meldete 2023 eine grundsätzliche Einigung über seine Verpflichtung.",
+        "fr": "Passé par le Real Madrid et Lyon en 2017/18, puis de retour à Madrid en 2018. Séville annonce un accord de principe en 2023.",
+        "it": "Ha giocato nel Real Madrid e nel Lione nel 2017/18, tornando a Madrid nel 2018. Nel 2023 il Siviglia annuncia un accordo di massima."
+      }
     }
   }
 }
