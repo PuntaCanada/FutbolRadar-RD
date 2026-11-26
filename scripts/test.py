@@ -46,6 +46,19 @@ class Tests(unittest.TestCase):
     self.assertIn(D['clubFacts'][slug]['city'],profile)
     self.assertIn(D['stadiumReferenceSeason'],profile)
     self.assertNotIn('<iframe',profile)
+ def test_players(self):
+  from players_view import D,P
+  self.assertEqual(len(P),18)
+  self.assertEqual(len({x['id'] for x in P}),18)
+  self.assertEqual(sum(x['source']=='fed' for x in P),17)
+  for lang in ['es','en','de','fr','it']:
+   page=(p/'public'/lang/'legionarios/index.html').read_text()
+   self.assertEqual(page.count('class="player-card"'),18)
+   for player in P:
+    profile=(p/'public'/lang/'legionarios'/player['id']/'index.html').read_text()
+    self.assertIn('id="player-profile"',profile)
+    self.assertIn(D['sources'][player['source']]['date'],profile)
+    self.assertNotIn('<img',profile)
  def test_parser(self):
   raw=b'date,home_team,away_team,home_score,away_score,tournament,city,country,neutral\n2000-01-01,Dominican Republic,Test,1,1,Friendly,City,Country,TRUE\n'
   shoot=b'date,home_team,away_team,winner\n2000-01-01,Dominican Republic,Test,Dominican Republic\n'

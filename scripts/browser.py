@@ -1,5 +1,6 @@
 import subprocess,time
 from ldf_view import D
+from players_view import P
 from playwright.sync_api import sync_playwright
 server=subprocess.Popen(['python3','-m','http.server','8765','--bind','127.0.0.1','--directory','public'])
 try:
@@ -11,11 +12,25 @@ try:
    errors=[]
    page.on('pageerror',lambda e:errors.append(str(e)))
    for lang in ['es','en','de','fr','it']:
-    for section in ['', 'seleccion/','liga/','academias/','fuentes/','patrocinio/']+['liga/'+slug+'/' for slug,name in D['clubs']]:
+    for section in ['', 'seleccion/','liga/','academias/','fuentes/','patrocinio/']+['liga/'+slug+'/' for slug,name in D['clubs']]+['legionarios/']+['legionarios/'+p['id']+'/' for p in P]:
      response=page.goto('http://127.0.0.1:8765/'+lang+'/'+section)
      assert response.ok
      assert page.locator('html').get_attribute('lang')==lang
      assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), (size, page.url)
+     if section=='legionarios/':
+      assert page.locator('.player-card:visible').count()==18
+      page.locator('#player-country').select_option('ES')
+      assert page.locator('.player-card:visible').count()==6
+      assert page.locator('#player-count').inner_text()=='6'
+      assert set(page.locator('.player-card:visible').evaluate_all('(rows) => rows.map(r => r.dataset.name)'))=={p['name'] for p in P if p['country']=='ES'}
+      page.locator('#player-position').select_option('df')
+      assert page.locator('.player-card:visible').count()==3
+      page.locator('#player-name').fill('junior')
+      assert page.locator('#player-count').inner_text()=='1'
+      page.locator('#player-name').fill('not-a-player')
+      assert page.locator('#player-count').inner_text()=='0'
+     elif section.startswith('legionarios/'):
+      assert page.locator('#player-profile').count()==1
      if section.startswith('liga/') and section!='liga/':
       assert page.locator('#club-facts dt').count()==5
       assert page.locator('#club-facts dd').count()==5
@@ -50,7 +65,7 @@ try:
    page.reload()
    assert page.locator('html').get_attribute('data-theme')==theme
    assert not errors, errors
-   print('Passed viewport:', size, '70 pages and theme persistence')
+   print('Passed viewport:', size, '165 pages and theme persistence')
    page.close()
   browser.close()
  print('Chromium desktop and mobile: passed')
