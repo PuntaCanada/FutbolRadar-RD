@@ -26,6 +26,45 @@
         "fr": "Engagé par Houston Dynamo FC en 2022, il évolue avec Houston Dynamo FC 2 en MLS NEXT Pro. Nashville SC annonce son recrutement en 2025 et le présente dans son effectif 2026.",
         "it": "Ingaggiato da Houston Dynamo FC nel 2022, gioca con Houston Dynamo FC 2 in MLS NEXT Pro. Nashville SC annuncia il suo ingaggio nel 2025 e lo include nella rosa 2026."
       }
+    },
+    "pablo-rosario": {
+      "sources": [
+        "https://www.ogcnice.com/en/fiche/1971/pablo-rosario.html",
+        "https://www.ogcnice.com/en/article/129128/pablo-rosario-moves-to-porto.html"
+      ],
+      "text": {
+        "es": "Pasó por la cantera del Ajax y debutó como sénior en Almere City en 2015/16. Ganó la liga neerlandesa 2017/18 con el PSV. Jugó en el OGC Nice de 2021 a 2025, antes de fichar por el FC Porto.",
+        "en": "Trained at Ajax and made his senior debut at Almere City in 2015/16. Won the 2017/18 Dutch league with PSV. Played for OGC Nice from 2021 to 2025 before joining FC Porto.",
+        "de": "Ausbildung bei Ajax, Seniorendebüt bei Almere City 2015/16. Niederländischer Meister 2017/18 mit PSV. Von 2021 bis 2025 bei OGC Nizza, anschließend Wechsel zum FC Porto.",
+        "fr": "Formé à l’Ajax, il débute chez les seniors à Almere City en 2015/16. Champion des Pays-Bas 2017/18 avec le PSV. À Nice de 2021 à 2025, puis au FC Porto.",
+        "it": "Formato all’Ajax, debutta tra i senior all’Almere City nel 2015/16. Campione dei Paesi Bassi 2017/18 con il PSV. Al Nizza dal 2021 al 2025, poi al Porto."
+      }
+    },
+    "heinz-morschel": {
+      "sources": [
+        "https://fcvizela.pt/2024/08/09/morschel-chega-para-o-meio-campo/",
+        "https://fcvizela.pt/2026/05/25/heinz-morschel-novamente-no-onze-do-ano-da-ii-liga/"
+      ],
+      "text": {
+        "es": "Jugó en el Dynamo Dresden y el Újpest antes de incorporarse al FC Vizela en 2024. Fue elegido en el once del año de la segunda liga portuguesa por segunda temporada consecutiva en 2026.",
+        "en": "Played for Dynamo Dresden and Újpest before joining FC Vizela in 2024. Selected for the Portuguese second division team of the year for the second consecutive season in 2026.",
+        "de": "Stationen bei Dynamo Dresden und Újpest vor dem Wechsel zum FC Vizela 2024. 2026 zum zweiten Mal in Folge in die Saisonelf der zweiten portugiesischen Liga gewählt.",
+        "fr": "Passé par le Dynamo Dresde et Újpest avant de rejoindre Vizela en 2024. Élu dans le onze de la saison de deuxième division portugaise pour la deuxième année consécutive en 2026.",
+        "it": "Ha giocato nel Dynamo Dresda e nell’Újpest prima di passare al Vizela nel 2024. Nel 2026 è stato incluso nella squadra dell’anno della seconda divisione portoghese per la seconda stagione consecutiva."
+      }
+    },
+    "peter-gonzalez": {
+      "sources": [
+        "https://www.gornikzabrze.pl/en/news/events/real-madrid-youth-product-gornik-peter-federico-strengthens-tricolors",
+        "https://www.gornikzabrze.pl/druzyny/druzyna-i/zawodnicy-i-sztab/peter-federico-gonzalez-carmona"
+      ],
+      "text": {
+        "es": "Formado en el Real Madrid, pasó por Valencia, Getafe y Real Valladolid. Participó en los Juegos Olímpicos de 2024. Górnik anunció su fichaje definitivo en 2026 con contrato hasta junio de 2029.",
+        "en": "A Real Madrid academy graduate, he played for Valencia, Getafe and Real Valladolid. Participated in the 2024 Olympics. Górnik announced his permanent signing in 2026 with a contract through June 2029.",
+        "de": "Ausbildung bei Real Madrid, Stationen bei Valencia, Getafe und Real Valladolid. Teilnehmer der Olympischen Spiele 2024. Górnik meldete 2026 seine feste Verpflichtung bis Juni 2029.",
+        "fr": "Formé au Real Madrid, il est passé par Valence, Getafe et Valladolid. Participant aux Jeux olympiques 2024. Górnik annonce son transfert définitif en 2026 avec un contrat jusqu’en juin 2029.",
+        "it": "Formato al Real Madrid, ha giocato per Valencia, Getafe e Valladolid. Ha partecipato ai Giochi olimpici 2024. Górnik ha annunciato il suo acquisto definitivo nel 2026 con contratto fino a giugno 2029."
+      }
     }
   }
 }
