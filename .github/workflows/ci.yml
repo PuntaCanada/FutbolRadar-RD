@@ -8,6 +8,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 scripts/import_national.py
+        env:
+          NATIONAL_UPSTREAM_SHA: ca84241bb3eed854a1956a2fab442fe4daad40dd
+      - run: echo '6e55e25bfc4a914446c092a3e29e8eb89afb2388681948da179519b0f08fc9e6  data/national.json' | sha256sum -c -
       - run: python3 scripts/build.py
       - run: python3 scripts/test.py
       - run: pip install playwright
@@ -17,3 +20,24 @@ jobs:
         with:
           name: validated-national-data
           path: data/national.json
+  persist-snapshot:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/feat/national-history'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: validated-national-data
+          path: data
+      - run: |
+          echo '6e55e25bfc4a914446c092a3e29e8eb89afb2388681948da179519b0f08fc9e6  data/national.json' | sha256sum -c -
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/national.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Persist verified pinned national history snapshot'
+            git push origin HEAD:feat/national-history
+          fi
