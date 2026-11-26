@@ -1,0 +1,176 @@
+{
+  "sources": {
+    "fed": {
+      "url": "https://www.fedofutbol.do/republica-dominicana-dio-la-lista-para-enfrentar-a-uruguay-en-maldonado/",
+      "date": "2026-11-08"
+    },
+    "uefa": {
+      "url": "https://www.uefa.com/uefachampionsleague/clubs/players/250122839/",
+      "date": "2026-11-26"
+    }
+  },
+  "players": [
+    {
+      "id": "xavier-valdez",
+      "name": "Xavier Valdez",
+      "club": "Nashville SC",
+      "country": "US",
+      "position": "gk",
+      "source": "fed",
+      "competition": null
+    },
+    {
+      "id": "wilkins-geraldo",
+      "name": "Wilkins Geraldo",
+      "club": "AD Alcorcón",
+      "country": "ES",
+      "position": "gk",
+      "source": "fed",
+      "competition": null
+    },
+    {
+      "id": "benji-nunez",
+      "name": "Benji Núñez",
+      "club": "CD Coria",
+      "country": "ES",
+      "position": "df",
+      "source": "fed",
+      "competition": null
+    },
+    {
+      "id": "edgar-pujol",
+      "name": "Edgar Pujol",
+      "club": "Racing Club de Ferrol",
+      "country": "ES",
+      "position": "df",
+      "source": "fed",
+      "competition": null
+    },
+    {
+      "id": "luiyi-de-lucas",
+      "name": "Luiyi De Lucas",
+      "club": "FC Krasava",
+      "country": "CY",
+      "position": "df",
+      "source": "fed",
+      "competition": null
+    },
+    {
+      "id": "noah-dollenmayer",
+      "name": "Noah Dollenmayer",
+      "club": "El Paso Locomotive",
+      "country": "US",
+      "position": "df",
+      "source": "fed",
+      "competition": null
+    },
+    {
+      "id": "juan-carlos-familia",
+      "name": "Juan Carlos Familia",
+      "club": "RKC Waalwijk",
+      "country": "NL",
+      "position": "df",
+      "source": "fed",
+      "competition": null
+    },
+    {
+      "id": "pablo-rosario",
+      "name": "Pablo Rosario",
+      "club": "FC Porto",
+      "country": "PT",
+      "position": "mf",
+      "source": "fed",
+      "competition": null
+    },
+    {
+      "id": "heinz-morschel",
+      "name": "Heinz Morschel",
+      "club": "FC Vizela",
+      "country": "PT",
+      "position": "mf",
+      "source": "fed",
+      "competition": null
+    },
+    {
+      "id": "lucas-breton",
+      "name": "Lucas Bretón",
+      "club": "Málaga CF",
+      "country": "ES",
+      "position": "mf",
+      "source": "fed",
+      "competition": null
+    },
+    {
+      "id": "mariano-diaz",
+      "name": "Mariano Díaz",
+      "club": "Deportivo Alavés",
+      "country": "ES",
+      "position": "fw",
+      "source": "fed",
+      "competition": null
+    },
+    {
+      "id": "dorny-romero",
+      "name": "Dorny Romero",
+      "club": "Club Bolívar",
+      "country": "BO",
+      "position": "fw",
+      "source": "fed",
+      "competition": null
+    },
+    {
+      "id": "peter-gonzalez",
+      "name": "Peter González",
+      "club": "Gornik Zabrze",
+      "country": "PL",
+      "position": "fw",
+      "source": "fed",
+      "competition": null
+    },
+    {
+      "id": "edarlyn-reyes",
+      "name": "Edarlyn Reyes",
+      "club": "Arsenal Tula",
+      "country": "RU",
+      "position": "fw",
+      "source": "fed",
+      "competition": null
+    },
+    {
+      "id": "juan-carlos-pineda",
+      "name": "Juan Carlos Pineda",
+      "club": "FC Sheriff Tiraspol",
+      "country": "MD",
+      "position": "fw",
+      "source": "fed",
+      "competition": null
+    },
+    {
+      "id": "edison-azcona",
+      "name": "Edison Azcona",
+      "club": "Las Vegas Lights",
+      "country": "US",
+      "position": "fw",
+      "source": "fed",
+      "competition": null
+    },
+    {
+      "id": "luis-meneses",
+      "name": "Luís Meneses",
+      "club": "CA Rentistas",
+      "country": "UY",
+      "position": "fw",
+      "source": "fed",
+      "competition": null
+    },
+    {
+      "id": "junior-firpo",
+      "name": "Júnior Firpo",
+      "club": "Real Betis",
+      "country": "ES",
+      "position": "df",
+      "source": "uefa",
+      "competition": "UEFA Champions League 2026/27"
+    }
+  ]
+}
