@@ -1,0 +1,111 @@
+{
+  "season": "2026/27",
+  "asOf": "2026-11-26",
+  "clubs": [
+    [
+      "cibao",
+      "Cibao FC"
+    ],
+    [
+      "salcedo",
+      "Salcedo FC"
+    ],
+    [
+      "moca",
+      "Moca FC"
+    ],
+    [
+      "om",
+      "Universidad O&M FC"
+    ],
+    [
+      "delfines",
+      "Delfines del Este"
+    ],
+    [
+      "atlantico",
+      "Atlántico FC"
+    ],
+    [
+      "vega-real",
+      "Atlético Vega Real"
+    ],
+    [
+      "jarabacoa",
+      "Jarabacoa FC"
+    ]
+  ],
+  "tournaments": [
+    {
+      "name": "Apertura",
+      "year": 2026,
+      "end": "2026-12-06"
+    },
+    {
+      "name": "Clausura",
+      "year": 2027
+    }
+  ],
+  "regularMatchesPerClub": 14,
+  "regularMatches": 56,
+  "semifinalists": 4,
+  "legs": 2,
+  "champions": [
+    [
+      "2025/26",
+      "Salcedo FC"
+    ],
+    [
+      "2024",
+      "Cibao FC"
+    ],
+    [
+      "2023",
+      "Cibao FC"
+    ],
+    [
+      "2022",
+      "Cibao FC"
+    ],
+    [
+      "2021",
+      "Cibao FC"
+    ],
+    [
+      "2020",
+      "Universidad O&M FC"
+    ],
+    [
+      "2019",
+      "Atlético Pantoja"
+    ],
+    [
+      "2018",
+      "Cibao FC"
+    ],
+    [
+      "2017",
+      "Atlántico FC"
+    ],
+    [
+      "2016",
+      "Barcelona Atlético"
+    ],
+    [
+      "2015",
+      "Atlético Pantoja"
+    ]
+  ],
+  "sources": {
+    "format": "https://www.futbolrd.com/noticias/como-funcionara-la-liga-dominicana-de-futbol-2026-2027-guia-sencilla-del-formato-apertura-y-clausura",
+    "calendar": "https://www.elcaribe.com.do/deportes/futbol/futbol-nacional/torneo-ldf-2026-27-se-inicia-22-de-agosto/",
+    "champions": "https://www.tulodeportes.com/futbol-dominicano/ldf/campeonatos",
+    "championOfficial": "https://www.fedofutbol.do/presidente-de-fifa-felicito-a-salcedo-tras-titularse-campeon-de-la-ldf/",
+    "fixtures": "https://futboliza.com/tournaments/ldf-2026-2027",
+    "standings": "https://futbolrd.com/estadisticas/ldf",
+    "broadcast": "https://www.youtube.com/channel/UCyTqCrAq1n3HF0W7dRNTArA"
+  },
+  "matches": [],
+  "standings": [],
+  "rights": "Individual factual editorial records only; no database extraction, logos, copied articles or video embeds. External scores and tables linked only."
+}

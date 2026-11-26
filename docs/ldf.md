@@ -1,0 +1,3 @@
+# LDF 2026/27
+
+Editorial factual overview as of 2026-11-26; sources are recorded in data/ldf.json. The participant list and format are reported by FutbolRD and elCaribe; historical champion facts are cross-referenced with Tulo Deportes and the federation's confirmation of Salcedo's 2025/26 title. This does not grant a license to reproduce their databases, articles, images or logos. Fixtures and standings are links only; both local arrays deliberately remain empty. The official YouTube channel is linked without an embed or a claim that a particular match is streamed. No advertising. Future results ingestion requires documented permission and source validation. Club pages initially describe participation only; additional facts require verification.
