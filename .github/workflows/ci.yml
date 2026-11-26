@@ -20,3 +20,8 @@ jobs:
         with:
           name: validated-national-data
           path: data/national.json
+      - run: python3 scripts/visual.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: visual-review
+          path: visual-review/
